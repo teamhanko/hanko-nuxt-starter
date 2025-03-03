@@ -1,7 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+    import '@/style/hanko-style.css'
+
+    definePageMeta({
+        middleware: ["hanko-logged-out"],
+    });
+</script>
 
 <template>
-  <main>
-    <h1>Hello World</h1>
-  </main>
+    <main>
+        <HankoStarterInfo/>
+        <hanko-auth />
+    </main>
 </template>

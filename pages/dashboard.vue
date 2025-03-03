@@ -1,19 +1,16 @@
 <script setup lang="ts">
-    import '@/style/hanko-style.css'
-
     definePageMeta({
         middleware: ["hanko-logged-in"],
     });
 </script>
 
 import { ClientOnly } from '../.nuxt/components';
-
 <template>
     <main>
         <ClientOnly>
             <HankoStarterHeader/>
         </ClientOnly>
         <HankoStarterInfo/> 
-        <hanko-profile />
-    </main>
+        <HankoStarterDashboard/> 
+</main>
 </template>
