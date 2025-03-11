@@ -23,7 +23,7 @@
         </div>
         <div className='userDropdown'>
             <button @click="navigateTo('/profile')" v-if="route.path.includes('dashboard') ">Profile</button>
-            <button @click="navigateTo('/dashboard')" v-if="route.path.includes('profile')   ">Dashboard</button>
+            <button @click="navigateTo('/dashboard')" v-if="route.path.includes('profile') ">Dashboard</button>
             <button @click="logout">Sign-Out</button>
         </div>
       </div>
