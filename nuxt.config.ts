@@ -7,9 +7,8 @@ export default defineNuxtConfig({
     apiURL: process.env.NUXT_PUBLIC_HANKO_API_URL,
     cookieName: 'hanko',
     redirects:{
-      login: '/',
-      home: '/',
-      success: '/dashboard',
+      login: '/',//Path to redirect to when unauthenticated / logged out
+      success: '/dashboard',//Path to redirect to once logged in
     }
   },
   app: {
