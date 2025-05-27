@@ -1,7 +1,6 @@
 <script setup lang="ts">
-    import '@/style/hanko-style.css'
-
     definePageMeta({
+        //Define that you should run the logged in middleware
         middleware: ["hanko-logged-in"],
     });
 </script>
@@ -12,6 +11,6 @@
             <HankoStarterHeader/>
         </ClientOnly>
         <HankoStarterInfo/> 
-        <hanko-profile />
-    </main>
+        <HankoStarterDashboard/> 
+</main>
 </template>
