@@ -1,14 +1,15 @@
 <script setup lang="ts">
     import { useRoute } from 'vue-router'
 
-    const route = useRoute()    
+    const route = useRoute()
 
     const hanko = useHanko()
 
     const email = (await hanko?.user.getCurrent())?.email
 
-    function logout() {
-        hanko!.user.logout()
+    async function logout() {
+        await hanko?.user.logout()
+        await navigateTo('/')
     }
 </script>
 
@@ -27,5 +28,5 @@
             <button @click="logout">Sign-Out</button>
         </div>
       </div>
-    </div>  
+    </div>
 </template>
